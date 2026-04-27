@@ -17,7 +17,7 @@ on:
       MODEL:
         description: 'Set Device Model'
         required: true
-        default: 'philips-hy3000'
+        default: 'sn-r1'
         type: choice
         options:
         - philips-hy3000
@@ -25,7 +25,7 @@ on:
       LAN_IP:
         description: 'Set LAN IP Address'
         required: true
-        default: '192.168.99.1'
+        default: '192.168.11.1'
       WIFI_DRIVER:
         description: 'Choose WiFi Driver'
         required: true
@@ -50,7 +50,7 @@ on:
       EEPROM:
         description: 'Use highpower eeprom and fixed WiFi MAC address'
         required: false
-        default: false
+        default: true
         type: boolean
       EMMC_SPEED:
         description: 'Use eMMC highspeed'
@@ -60,7 +60,7 @@ on:
       DOCKERMAN:
         description: 'Build luci-app-dockerman'
         required: false
-        default: true
+        default: false
         type: boolean
       USB:
         description: 'Add USB packages'
@@ -70,7 +70,7 @@ on:
       OPENCLASH:
         description: 'OPENCLASH'
         required: false
-        default: true
+        default: false
         type: boolean
       APP_MTK:
         description: 'Use luci-app-mtk wifi config'
@@ -93,8 +93,8 @@ env:
   ###############手动修改##############
   OPENWRT_NAME: hanwckf
   UPLOAD_TAG_NAME: ${{ github.event.inputs.MODEL }}
-  REPO_URL: https://github.com/Yuzhii0718/immortalwrt-mt798x-hanwckf
-  REPO_BRANCH: openwrt-21.02
+  REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x-6.6
+  REPO_BRANCH: openwrt-24.10-6.6
   FEEDS_CONF: hanwckf-diy/feeds.conf.default
   HY3000_DTS_FILE: target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-philips-hy3000.dts
   R1_DTS_FILE: target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-sn-r1.dts
