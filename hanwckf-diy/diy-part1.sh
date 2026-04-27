@@ -15,3 +15,4 @@
 #git clone https://github.com/messense/aliyundrive-webdav package/messense
 git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky
 git clone  https://github.com/gdy666/luci-app-lucky.git package/luci-app-lucky
+git clone  https://github.com/immortalwrt/homeproxy
